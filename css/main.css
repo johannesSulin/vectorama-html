@@ -1,6 +1,6 @@
 body {
     font-family: 'Nunito', sans-serif;
-    color: white;
+    color: black;
 }
 h1 {
     text-align: center;
@@ -12,8 +12,8 @@ h1 {
     top: 0;
     left: 0;
     z-index: -1;
-    background: linear-gradient(to right, rgb(99, 39, 39), rgb(165, 39, 39), rgb(184, 39, 39), rgb(212, 39, 39), rgb(184, 39, 39), rgb(165, 39, 39), rgb(99, 39, 39));
-    background-size: 1400% 100%;
+    /*background: linear-gradient(to right, #8B0000, #A52A2A, #800000, #660000, #5B0000, #8B0000, #A52A2A, #800000);
+    background-size: 1400% 100%;*/
     animation: rainbow 25s ease infinite;
 }
 @keyframes rainbow {
