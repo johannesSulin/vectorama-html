@@ -15,13 +15,11 @@
 
   /* hr Line */
   .cool-line {
-    width: 50%;
     border: none;
     height: 2px;
     background: linear-gradient(to right, #4b6cb7, #182848);
-    position: relative;
+    align-self: center;
   }
-  
   .cool-line:before {
     content: "";
     position: absolute;
