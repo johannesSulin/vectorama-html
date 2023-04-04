@@ -1,29 +1,86 @@
-body {
-    font-family: 'Nunito', sans-serif;
-    color: black;
-}
-h1 {
-    text-align: center;
-}
-.background {
-    width: 100%;
-    height: 100%;
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+
+  /* Loader */
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
-    /*background: linear-gradient(to right, #8B0000, #A52A2A, #800000, #660000, #5B0000, #8B0000, #A52A2A, #800000);
-    background-size: 1400% 100%;*/
-    animation: rainbow 25s ease infinite;
-}
-@keyframes rainbow {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Header Styles */
+  header {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  /* Game Section Styles */
+  .game-section {
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  
+  /* Animation Styles */
+  .animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
