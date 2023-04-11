@@ -41,7 +41,7 @@ h1 {
     width: 100%;
     max-width: 867px;
     margin: 25px 10px;
-    height: calc(100% - 50px);
+    height: calc(100% - 10px);
     border: var(--border);
     border-radius: 5px;
     background: var(--msger-bg);
@@ -148,4 +148,28 @@ h1 {
 }
 .messenger-send-btn:hover {
     background: rgb(0, 180, 50);
+}
+
+/* Leaderboard */
+.leaderboard {
+    position: relative;
+    width: auto;
+    min-width: 45%;
+    height: 308px;
+    background: -webkit-linear-gradient(top, #3A404D, #181C26);
+    border-radius: 10px;
+    box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3);
+}
+.leaderboard h1 {
+    font-size: 18px;
+    color: #E1E1E1;
+    padding: 12px 13px 18px;
+}
+.leaderboard h1 svg {
+    width: 25px;
+    height: 26px;
+    position: relative;
+    top: 3px;
+    margin-right: 6px;
+    vertical-align: baseline;
 }
