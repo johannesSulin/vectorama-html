@@ -8,29 +8,35 @@
     --left-msg-bg: #ECECEC;
     --right-msg-bg: #579FFB;
 }
+html {
+    width: 100%;
+    height: 100%;
+}
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: var(--body-bg);
+    background: linear-gradient(-45deg, 
+    #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    /*background-image: var(--body-bg);*/
+    animation: gradient 15s ease infinite;
 }
+
 /* Header */
 .penrose-64 {
-    position: absolute;
-    z-index: -1;
-    width: auto;
-    height: 82px;
+    max-width: 64px;
+    height: auto;
     transform: rotate(180deg);
-    filter: blur(0.8px);
-    -webkit-filter: blur(0.8px);
 }
 h1 {
+    width: auto;
+    position: relative;
     -webkit-text-stroke-width: 0.2px;
     -webkit-text-stroke-color: rgb(0, 0, 0);
 }
-.image-center {
-    display: flex;
-    justify-content: center;
+.messenger img {
+    position: absolute;
 }
 
 /* Chat Box */
@@ -39,9 +45,9 @@ h1 {
     flex-flow: column wrap;
     justify-content: space-between;
     width: 100%;
-    max-width: 867px;
+    max-width: 1250px;
     margin: 25px 10px;
-    height: calc(100% - 10px);
+    height: calc(100% - 100px);
     border: var(--border);
     border-radius: 5px;
     background: var(--msger-bg);
@@ -49,7 +55,7 @@ h1 {
 }
 .messenger-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px;
     border-bottom: var(--border);
     background: #eee;
@@ -58,6 +64,7 @@ h1 {
 
 /* Messenger User */
 .messenger-chat {
+    max-height: 800px;
     flex: 1;
     overflow-y: auto;
     padding: 10px;
@@ -152,6 +159,7 @@ h1 {
 
 /* Leaderboard */
 .leaderboard {
+    clear: both;
     position: relative;
     width: auto;
     min-width: 45%;
@@ -173,4 +181,17 @@ h1 {
     top: 3px;
     margin-right: 6px;
     vertical-align: baseline;
+}
+
+/* Animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
