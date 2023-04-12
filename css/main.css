@@ -27,7 +27,8 @@ body {
 .penrose-64 {
     max-width: 64px;
     height: auto;
-    transform: rotate(180deg);
+    /*transform: rotate(180deg);*/
+    animation: rotate 15s ease infinite;
 }
 h1 {
     width: auto;
@@ -56,7 +57,7 @@ h1 {
 .messenger-header {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 20px;
     border-bottom: var(--border);
     background: #eee;
     color: #666;
@@ -194,4 +195,9 @@ h1 {
     100% {
         background-position: 0% 50%;
     }
+}
+@keyframes rotate {
+    0% {transform:rotate(0deg);}
+    50% {transform:rotate(360deg);}
+    100% {transform:rotate(360deg)}
 }
