@@ -30,6 +30,12 @@ body {
     /*transform: rotate(180deg);*/
     animation: rotate 15s ease infinite;
 }
+.penrose-animation {
+    -webkit-animation: rotate 15s ease infinite;
+    -moz-animation: rotate 15s ease infinite;
+    -o-animation: rotate 15s ease infinite;
+    animation: rotate 15s ease infinite;
+}
 h1 {
     width: auto;
     position: relative;
@@ -195,6 +201,21 @@ h1 {
     100% {
         background-position: 0% 50%;
     }
+}
+@-webkit-keyframes rotate {
+    0% {transform:rotate(0deg);}
+    50% {transform:rotate(360deg);}
+    100% {transform:rotate(360deg)}
+}
+@-moz-keyframes rotate {
+    0% {transform:rotate(0deg);}
+    50% {transform:rotate(360deg);}
+    100% {transform:rotate(360deg)}
+}
+@-o-keyframes rotate {
+    0% {transform:rotate(0deg);}
+    50% {transform:rotate(360deg);}
+    100% {transform:rotate(360deg)}
 }
 @keyframes rotate {
     0% {transform:rotate(0deg);}
