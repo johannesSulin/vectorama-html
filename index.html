@@ -6,6 +6,7 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -33,6 +34,19 @@
     <title>Find AI</title>
 </head>
 <body>
+
+    <button class="burger" onclick="toggleMenu()"></button>
+    <div class="menu">
+      <nav>
+        <a href="#" style="animation-delay: 0.2s">Etusivu</a>
+        <a href="#" style="animation-delay: 0.3s">Github</a>
+        <!--<a href="#" style="animation-delay: 0.4s"></a>
+        <a href="#" style="animation-delay: 0.5s"></a>-->
+      </nav>
+    </div>
+    <script type="text/javascript">
+      const toggleMenu = () => document.body.classList.toggle("open");
+    </script>
 
     <!-- Chat Box -->
     <section class="messenger">
