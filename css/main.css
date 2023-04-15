@@ -283,6 +283,68 @@ h1 {
     background: rgb(0, 180, 50);
 }
 
+/* Etusivu */
+.container-fluid {
+    padding: 0;
+    position: relative;
+}
+.row {
+    margin: 0;
+}
+.col-md-6 {
+    padding: 0;
+}
+.slider {
+    height: 100vh;
+    background-image: url('../images/sea-edge-79ab30e2.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+}
+.slider h2 {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align: center;
+}
+.slider p {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px black;
+    margin-top: 0.5rem;
+}
+.text {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px black;
+}
+.text p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+.qr-code {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid black;
+    display: none;
+}
+
 /* Animation */
 @keyframes gradient {
     0% {
@@ -295,6 +357,7 @@ h1 {
         background-position: 0% 50%;
     }
 }
+/* */
 @-webkit-keyframes rotate {
     0% {transform:rotate(0deg);}
     50% {transform:rotate(360deg);}
@@ -316,8 +379,13 @@ h1 {
     100% {transform:rotate(360deg)}
 }
 /* Mobile */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .messenger-chat {
         max-height: 580px;
     }
+}
+@media screen and (min-width: 768px) {
+    .qr-code {
+        display: block;
+      }
 }
