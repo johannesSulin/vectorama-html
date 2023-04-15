@@ -20,7 +20,6 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="js/script.js"></script>
 
     <!-- Load an icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -31,14 +30,83 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
     <link rel="icon" type="image/x-icon" href="images/penrose.png">
-    <title>Find AI</title>
+    <title>Document</title>
 </head>
 <body>
 
+    <style>
+        .container-fluid {
+            padding: 0;
+            position: relative;
+        }
+        .row {
+            margin: 0;
+        }
+        .col-md-6 {
+            padding: 0;
+        }
+        .slider {
+            height: 100vh;
+            background-image: url('images/sea-edge-79ab30e2.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem;
+        }
+        .slider h2 {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 2px 2px black;
+            text-align: center;
+        }
+        .slider p {
+            font-size: 2rem;
+            color: white;
+            text-shadow: 2px 2px black;
+            margin-top: 0.5rem;
+        }
+        .text {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .text h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px black;
+        }
+        .text p {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        .qr-code {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            border: 1px solid black;
+            display: none;
+        }
+        @media screen and (min-width: 768px) {
+        .qr-code {
+            display: block;
+          }
+        }
+      </style>
+
+    <!-- Menu -->
     <button class="burger" onclick="toggleMenu()"></button>
     <div class="menu">
       <nav>
-        <a href="#" style="animation-delay: 0.2s">Etusivu</a>
+        <a href="chatroom.html" style="animation-delay: 0.2s">Chat Room</a>
         <a href="https://github.com/Tuukkaleksi/vectorama-html" target="_blank" style="animation-delay: 0.3s">Github</a>
         <!--<a href="#" style="animation-delay: 0.4s"></a>
         <a href="#" style="animation-delay: 0.5s"></a>-->
@@ -48,267 +116,20 @@
       const toggleMenu = () => document.body.classList.toggle("open");
     </script>
 
-    <!-- Chat Box -->
-    <section class="messenger">
-        <div class="messenger-header">
-            <img src="images/penrose.png" class="penrose-64 penrose-animation" alt="Penrose Triangle">
-            <div class="messenger-header-title">
-                <h1 style="opacity: 0;">Vectorama</h1>
-            </div>
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-6 slider">
+            <h2>Welcome to our Website!</h2>
+            <p>Where creativity meets technology</p>
+            <p style="font-size: 20px;">Placeholder on everything</p>
         </div>
-    
-        <header class="messenger-header">
-            <div class="messenger-header-title">
-                - <i class="bi bi-option"></i> - Artificial Intelligence Chat - <i class="bi bi-option"></i> -
-            </div>
-        </header>
-
-    <!-- Start of the Messages -->
-    <main class="messenger-chat">
-        <!-- First Left Message AI -->
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
+        <div class="col-md-6 text">
+            <h1>About Us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit mauris eu risus tincidunt, id commodo lorem interdum. Maecenas eu lacinia purus. Proin ac magna non risus rhoncus euismod. Sed sagittis turpis sed arcu viverra scelerisque. Nulla facilisi. Aenean maximus nunc id ante eleifend consectetur.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit mauris eu risus tincidunt, id commodo lorem interdum.</p>
         </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
         </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-        <div class="message left-message">
-            <div class="message-img" style="background-image: url(https://cdn-icons-png.flaticon.com/512/773/773330.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Artificial Intelligence</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Hei, olen valmis kysymykseesi.
-                </div>
-            </div>
-        </div>
-
-        <!-- First Right Message Player -->
-        <div class="message right-message">
-            <div class="message-img" style="background-image: url(https://freesvg.org/img/abstract-user-flat-4.png);"></div>
-            <div class="message-bubble">
-                <div class="message-info">
-                    <div class="message-info-name">Username</div>
-                    <div class="message-info-time">00:00</div>
-                </div>
-                <div class="message-text">
-                    Mitä on elämä?
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Here to push the message through for AI -->
-        <form class="messenger-inputarea">
-            <input type="text" class="messenger-input" placeholder="Kirjoita kysymyksesi...">
-            <button type="submit" class="messenger-send-btn"><i class="bi bi-send"></i></button>
-        </form>
-    </section>
-
-    <!-- Popup -->
-    <div class="popup-box" id="hid" style="display: block; visibility: hidden;">
-        <div class="transparent-layer"></div>
-        <div class="popup-inner">
-            <h2>Valitse</h2>
-            <h4>Kuka Henkilöistä olisi Ai</h4>
-            <hr>
-            <div class="popup-msg">
-                <div class="popup-msg-icon" style="background-image: url(https://freesvg.org/img/abstract-user-flat-4.png);"></div>
-                <div class="popup-info">
-                    <div class="popup-info-name"><a>Username</a></div>
-                </div>
-            </div>
-                <!---->
-            <div class="popup-msg">
-                <div class="popup-msg-icon" style="background-image: url(https://freesvg.org/img/abstract-user-flat-4.png);"></div>
-                <div class="popup-info">
-                    <div class="popup-info-name"><a>Username</a></div>
-                </div>
-            </div>
-                <!---->
-            <div class="popup-msg">
-                <div class="popup-msg-icon" style="background-image: url(https://freesvg.org/img/abstract-user-flat-4.png);"></div>
-                <div class="popup-info">
-                    <div class="popup-info-name"><a>Username</a></div>
-                </div>
-            </div>
-            <hr>
-            <button class="popup-send-btn" onclick="hideDiv()"> Lähetä <i class="bi bi-send"></i></button>
-        </div>
+        <div class="qr-code">QR-Code Placeholder</div>
     </div>
-
-    <!-- Leaderboard 
-    <div class="leaderboard">
-        <h1>
-            <svg class="ico-cup">
-                <use xlink:href="#cup"></use>
-            </svg>
-            Eniten Arvaava Pelaaja
-        </h1>
-    </div> -->
 </body>
 </html>
