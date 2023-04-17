@@ -1,3 +1,6 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js";
+
 const firebaseConfig = {
     apiKey: "AIzaSyDWl4cNXbyHq9yTA9hAev1-fPvpdjgVbrs",
     authDomain: "aigame-3376a.firebaseapp.com",
@@ -12,4 +15,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export { app,db };
+export { app, db }
