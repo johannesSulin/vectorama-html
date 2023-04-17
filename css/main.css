@@ -1,6 +1,7 @@
 * {
     font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 :root {
     --body-bg: linear-gradient(135deg, #F5F7FA 0%, #c3CFE2 100%);
@@ -67,11 +68,17 @@ h1 {
 }
 .messenger-header {
     display: flex;
+    position: relative;
     justify-content: center;
+    text-align: center;
     padding: 20px;
     border-bottom: var(--border);
     background: #eee;
     color: #666;
+}
+.messenger-header h1 {
+    position: fixed;
+    text-align: center;
 }
 
 /* Messenger User */
@@ -319,5 +326,15 @@ h1 {
 @media screen and (max-width: 480px) {
     .messenger-chat {
         max-height: 580px;
+    }
+}
+
+/* Circle */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to { 
+        transform: rotate(360deg);
     }
 }
