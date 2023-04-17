@@ -54,5 +54,17 @@
       </script>
 
       <h1 id="name__"></h1>
+
+        /* OTTAA RANDOM KYSYMYKSEN FIREBASESTA
+                    const docRef = doc(db, "STATIC", "STATIC");
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            const data = docSnap.data()
+
+            document.getElementById("name__").innerHTML = data.kysymykset[Math.floor(Math.random()*data.kysymykset.length)];
+        }
+        */
+
 </body>
 </html>
